@@ -16,3 +16,4 @@ python-jose[cryptography]
 passlib[bcrypt]
 argon2-cffi
 datetime
+pydantic-settings
