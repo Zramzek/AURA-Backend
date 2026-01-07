@@ -147,19 +147,19 @@ function applyActiveState(container) {
       page === "homepage"
     ) {
       item.classList.add("active");
-      if (icon) icon.src = "/public/assets/dashboard_red.png";
+      if (icon) icon.src = "/assets/dashboard_red.png";
     } else if (
       currentPage.startsWith("verifikasiprestasi") &&
       page === "verifikasiprestasi"
     ) {
       item.classList.add("active");
-      if (icon) icon.src = "/public/assets/dataprestasi_red.png";
+      if (icon) icon.src = "/assets/dataprestasi_red.png";
     } else if (
       currentPage.startsWith("leaderboard") &&
       page === "leaderboard"
     ) {
       item.classList.add("active");
-      if (icon) icon.src = "/public/assets/profilprestasi_red.png";
+      if (icon) icon.src = "/assets/profilprestasi_red.png";
     }
   });
 }
@@ -178,7 +178,7 @@ export function initStaffSidebar(targetElement) {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", async (e) => {
       e.preventDefault();
-      
+
       const confirmed = await confirmationModal.show(
         "Konfirmasi Keluar",
         "Apakah Anda yakin ingin keluar dari aplikasi?"
