@@ -1,5 +1,5 @@
 from typing import Dict, Any, List, Optional
-from config.database import get_db
+from app.config.database import get_db
 from fastapi import HTTPException
 import numpy as np
 from scipy.spatial.distance import cosine

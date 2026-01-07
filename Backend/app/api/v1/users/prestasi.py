@@ -1,8 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends
 from typing import Dict, Any, List
 from pydantic import BaseModel
-from schemas.globaltypes import APIResponse
-from controllers.certificates.users.prestasi_controller import (
+from app.schemas.globaltypes import APIResponse
+from app.config.database import get_db
+from app.controllers.certificates.users.prestasi_controller import (
     get_user_profile_data,
     get_top_certificates,
     get_certificate_statistics,

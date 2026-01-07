@@ -5,6 +5,7 @@ supabase
 pytesseract
 pillow
 pdf2image
+torch --index-url https://download.pytorch.org/whl/cpu
 sentence-transformers
 requests
 python-dotenv

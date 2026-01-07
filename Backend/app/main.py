@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.v1.auth import auth
-from api.v1.users import dashboard, prestasi, certificate
-from api.v1.staff import certificate as certificatestaff, dashboard as dashboardstaff, leaderboard
+from app.api.v1.auth import auth
+from app.api.v1.users import dashboard, prestasi, certificate
+from app.api.v1.staff import certificate as certificatestaff, dashboard as dashboardstaff, leaderboard
 
 app = FastAPI(
     title="AURA API",

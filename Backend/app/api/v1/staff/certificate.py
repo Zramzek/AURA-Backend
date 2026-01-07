@@ -1,9 +1,10 @@
 from fastapi import APIRouter, HTTPException, Depends
 from typing import Dict, Any, List
 from pydantic import BaseModel
-from schemas.globaltypes import APIResponse
-from controllers.auth.auth_controllers import verify_token_logic
-from controllers.staff.certificate_controller import (
+from app.schemas.globaltypes import APIResponse
+from app.config.database import get_db
+from app.controllers.auth.auth_controllers import verify_token_logic
+from app.controllers.staff.certificate_controller import (
     get_certificate_list,
     validate_certificate as validate_certificate_controller,
     certificate_detail

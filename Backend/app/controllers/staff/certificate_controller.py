@@ -1,5 +1,5 @@
 from typing import Dict, Any, List
-from config.database import get_db
+from app.config.database import get_db
 from fastapi import HTTPException
 from datetime import datetime
 

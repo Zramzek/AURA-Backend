@@ -1,9 +1,10 @@
 from fastapi import APIRouter, HTTPException, Depends
 from typing import Dict, Any, List, Optional
 from pydantic import BaseModel
-from schemas.globaltypes import APIResponse
-from controllers.auth.auth_controllers import verify_token_logic
-from controllers.staff.dashboard_controller import (
+from app.schemas.globaltypes import APIResponse
+from app.config.database import get_db
+from app.controllers.auth.auth_controllers import verify_token_logic
+from app.controllers.staff.dashboard_controller import (
     get_staff_profile_data,
     get_certificate_status_counts,
     get_unique_students_by_fakultas,

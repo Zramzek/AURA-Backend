@@ -3,10 +3,10 @@ from fastapi import APIRouter, HTTPException, Depends, UploadFile, File
 from typing import Dict, Any
 from pydantic import BaseModel
 import uuid
-from schemas.globaltypes import APIResponse
-from config.database import get_db
-from controllers.auth.auth_controllers import verify_token_logic
-from controllers.certificates.certificates_controller import (
+from app.schemas.globaltypes import APIResponse
+from app.config.database import get_db
+from app.controllers.auth.auth_controllers import verify_token_logic
+from app.controllers.certificates.certificates_controller import (
     upload_certificate as upload_certificate_controller,
     complete_certificate as complete_certificate_controller
 )

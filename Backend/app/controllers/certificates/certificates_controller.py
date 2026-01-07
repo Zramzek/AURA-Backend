@@ -9,7 +9,7 @@ from pdf2image import convert_from_path
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 
-from config.database import get_db
+from app.config.database import get_db
 
 import os, json, uuid
 from pathlib import Path

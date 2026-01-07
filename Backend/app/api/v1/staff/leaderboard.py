@@ -1,8 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends
 from typing import Dict, Any, List, Optional
 from pydantic import BaseModel
-from schemas.globaltypes import APIResponse
-from controllers.staff.leaderboard_controller import (
+from app.schemas.globaltypes import APIResponse
+from app.config.database import get_db
+from app.controllers.staff.leaderboard_controller import (
     get_leaderboard_aggregated,
     search_certificates_similarity
 )

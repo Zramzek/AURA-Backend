@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from typing import Dict, Any
 from pydantic import BaseModel
-from schemas.globaltypes import APIResponse
+from app.schemas.globaltypes import APIResponse
 from fastapi.responses import JSONResponse
 
-from controllers.auth.auth_controllers import login_user, verify_token_logic, refresh_access_token
+from app.controllers.auth.auth_controllers import login_user, verify_token_logic, refresh_access_token
 
 router = APIRouter(
     prefix="/auth",
