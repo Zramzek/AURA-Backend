@@ -1,3 +1,5 @@
+import "./notification.css";
+
 export class Notification {
   constructor() {
     this.notificationElement = null;
@@ -6,26 +8,11 @@ export class Notification {
   }
 
   initialize() {
-    this.injectStyles();
-
     if (!document.getElementById("notificationAlert")) {
       this.createNotificationElement();
     } else {
       this.notificationElement = document.getElementById("notificationAlert");
     }
-  }
-
-  injectStyles() {
-    if (this.cssInjected) return;
-
-    // Create link element for CSS
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "/src/component/notification.css";
-
-    // Add to document head
-    document.head.appendChild(link);
-    this.cssInjected = true;
   }
 
   createNotificationElement() {
