@@ -230,7 +230,7 @@ export function initInputSectionComponent() {
 
       const response = await fetch(
         `${
-          import.meta.env.DEV_BACKEND_URL || "/api/v1"
+          import.meta.env.VITE_BACKEND_URL || "/api/v1"
         }/users/certificates/upload`,
         {
           method: "POST",

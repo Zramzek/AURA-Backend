@@ -34,7 +34,4 @@ export default defineConfig({
       },
     },
   },
-  define: {
-    "import.meta.env.DEV_BACKEND_URL": JSON.stringify("/api/v1"),
-  },
 });

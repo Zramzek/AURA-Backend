@@ -3,7 +3,7 @@ const ACCESS_TOKEN_KEY = "aura_access_token";
 const REFRESH_TOKEN_KEY = "aura_refresh_token";
 const EXPIRES_AT_KEY = "aura_expires_at";
 const USER_DATA_KEY = "aura_user_data";
-const API_BASE_URL = import.meta.env.DEV_BACKEND_URL || "/api/v1";
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "/api/v1";
 
 class AuthAPI {
   constructor() {
@@ -135,7 +135,7 @@ class AuthAPI {
   async logout() {
     try {
       if (this.accessToken) {
-        await fetch(`${import.meta.env.DEV_BACKEND_URL}/auth/logout`, {
+        await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/logout`, {
           method: "POST",
           headers: this.getAuthHeaders(),
         });
@@ -154,7 +154,7 @@ class AuthAPI {
         return false;
       }
 
-      const response = await fetch(`${import.meta.env.DEV_BACKEND_URL}/auth/refresh`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/refresh`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
