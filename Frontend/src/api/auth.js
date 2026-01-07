@@ -86,13 +86,16 @@ class AuthAPI {
   // Login method
   async login(username, password) {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/auth/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        }
+      );
 
       const data = await response.json();
 
@@ -154,13 +157,16 @@ class AuthAPI {
         return false;
       }
 
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/refresh`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ refresh_token: this.refreshToken }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/auth/refresh`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ refresh_token: this.refreshToken }),
+        }
+      );
 
       const data = await response.json();
 
