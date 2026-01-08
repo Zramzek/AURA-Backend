@@ -186,7 +186,7 @@ export function initStaffSidebar(targetElement) {
 
       if (confirmed) {
         await authAPI.logout();
-        window.location.href = "/index.html"; // Redirect to login
+        window.location.href = "/index.html";
       }
     });
   }
