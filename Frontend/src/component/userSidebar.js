@@ -147,19 +147,19 @@ function applyActiveState(container) {
       page === "homepage"
     ) {
       item.classList.add("active");
-      if (icon) icon.src = "/public/assets/dashboard_red.png";
+      if (icon) icon.src = "/assets/dashboard_red.png";
     } else if (
       currentPage.startsWith("dataprestasi") &&
       page === "dataprestasi"
     ) {
       item.classList.add("active");
-      if (icon) icon.src = "/public/assets/dataprestasi_red.png";
+      if (icon) icon.src = "/assets/dataprestasi_red.png";
     } else if (
       currentPage.startsWith("profilprestasi") &&
       page === "profilprestasi"
     ) {
       item.classList.add("active");
-      if (icon) icon.src = "/public/assets/profilprestasi_red.png";
+      if (icon) icon.src = "/assets/profilprestasi_red.png";
     }
   });
 }

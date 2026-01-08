@@ -656,20 +656,6 @@
                 </div>
               </div>
             </div>
-            <div class="pp-card">
-              <h3>Skor Indeks Prestasi AURA</h3>
-              <div
-                style="
-                  font-size: 36px;
-                  font-weight: bold;
-                  color: #ec1d25;
-                  margin: 10px 0;
-                "
-                id="spu-score"
-              >
-                <span id="spu-score-value">-</span> / 100
-              </div>
-            </div>
           </div>
 
           <!-- Right Column -->
@@ -993,10 +979,6 @@
             },
           },
         });
-
-        // 5. Update SPU Score (Top Certificates average or specific field if available)
-        document.getElementById("spu-score-value").textContent =
-          stats.avg_spu.toFixed(2);
       }
     </script>
     <script src="sidebar.js"></script>
